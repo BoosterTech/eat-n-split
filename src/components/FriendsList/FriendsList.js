@@ -1,16 +1,17 @@
 import initialFriends from "../../initialFriends";
-import Friend from "../Friend/Friend";
+import { Friend } from "../Friend/Friend";
+import { Button, List } from "./styled";
 
 const FriendsList = () => {
   const friends = initialFriends;
 
   return (
-    <ul>
+    <List>
       {friends.map((friend) => (
         <Friend key={friend.id} friend={friend} />
       ))}
-      <button>Add friend</button>
-    </ul>
+      <Button>Add friend</Button>
+    </List>
   );
 };
 
