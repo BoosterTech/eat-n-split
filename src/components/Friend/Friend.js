@@ -1,22 +1,29 @@
-const Friend = ({ friend }) => {
+import { Button, Name, Text } from "./styled";
+import { FriendInfo, FriendListItem, ImageContainer } from "./styled";
+
+export const Friend = ({ friend }) => {
   return (
-    <li>
-      <img src={`${friend.image}/?u=${friend.id}`} />
-      <h3>{friend.name}</h3>
-      {friend.balance < 0 && (
-        <p>
-          You owe {friend.name} {friend.balance}$
-        </p>
-      )}
-      {friend.balance > 0 && (
-        <p>
-          {friend.name} owes you {friend.balance}$
-        </p>
-      )}
-      {friend.balance === 0 && <p>You and {friend.name} are even</p>}
-      <button>select</button>
-    </li>
+    <FriendListItem>
+      <Image src={`${friend.image}/?u=${friend.id}`} friend={friend} />
+      <FriendInfo>
+        <Name>{friend.name}</Name>
+        {friend.balance < 0 && (
+          <Text>
+            You owe {friend.name} {Math.abs(friend.balance)}$
+          </Text>
+        )}
+        {friend.balance > 0 && (
+          <Text>
+            {friend.name} owes you {Math.abs(friend.balance)}$
+          </Text>
+        )}
+        {friend.balance === 0 && <Text>You and {friend.name} are even</Text>}
+      </FriendInfo>
+      <Button>Select</Button>
+    </FriendListItem>
   );
 };
 
-export default Friend;
+const Image = ({ src, friend }) => {
+  return <ImageContainer src={src} alt={friend.name} />;
+};
