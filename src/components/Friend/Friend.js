@@ -1,4 +1,5 @@
-import { Button, Name, Text } from "./styled";
+import Button from "../Button/Button";
+import { Name, Text } from "./styled";
 import { FriendInfo, FriendListItem, ImageContainer } from "./styled";
 
 export const Friend = ({ friend }) => {
