@@ -5,6 +5,7 @@ export const FriendListItem = styled.li`
   gap: 20px;
   align-items: center;
   padding: 10px;
+  margin: 5px 0;
 `;
 
 export const ImageContainer = styled.img`
@@ -21,14 +22,4 @@ export const Name = styled.h3`
 export const Text = styled.p`
   margin: 0;
   font-size: 0.9rem;
-`;
-
-export const Button = styled.button`
-  padding: 6px 11px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border-radius: 5px;
-  border: none;
-  background-color: #F7A75E;
-  margin-left: auto;
 `;
