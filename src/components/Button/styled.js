@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.button`
+export const Element = styled.button`
   display: block;
   padding: 6px 11px;
   font-size: 0.8rem;
@@ -9,7 +9,6 @@ export const Wrapper = styled.button`
   border: none;
   background-color: #f7a75e;
   margin-left: auto;
-  margin-right: 10px;
   margin-top: 20px;
 
   @media (hover: hover) {
