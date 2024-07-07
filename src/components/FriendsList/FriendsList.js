@@ -1,6 +1,8 @@
 import initialFriends from "../../initialFriends";
+import AddFriendForm from "../AddFriendForm/AddFriendForm";
+import Button from "../Button/Button";
 import { Friend } from "../Friend/Friend";
-import { Button, List } from "./styled";
+import { List } from "./styled";
 
 const FriendsList = () => {
   const friends = initialFriends;
@@ -10,7 +12,8 @@ const FriendsList = () => {
       {friends.map((friend) => (
         <Friend key={friend.id} friend={friend} />
       ))}
-      <Button>Add friend</Button>
+      <AddFriendForm />
+      <Button>Add Friend</Button>
     </List>
   );
 };
