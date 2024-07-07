@@ -1,7 +1,7 @@
-import { Wrapper } from "./styled";
+import { Element } from "./styled";
 
-function Button({children}) {
-  return <Wrapper>{children}</Wrapper>;
+function Button({ children, onClick }) {
+  return <Element onClick={onClick}>{children}</Element>;
 }
 
 export default Button;
