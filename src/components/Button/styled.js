@@ -9,7 +9,8 @@ export const Element = styled.button`
   border: none;
   background-color: #f7a75e;
   margin-left: auto;
-  margin-top: 20px;
+  margin-top: 2px;
+  margin-right: 0;
 
   @media (hover: hover) {
     cursor: pointer;
