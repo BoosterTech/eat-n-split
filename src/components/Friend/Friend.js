@@ -2,9 +2,11 @@ import Button from "../Button/Button";
 import { Name, Text } from "./styled";
 import { FriendInfo, FriendListItem, ImageContainer } from "./styled";
 
-export const Friend = ({ friend }) => {
+export const Friend = ({ friend, onSelection, selectedFriend }) => {
+  const isSelected = selectedFriend?.id === friend.id;
+
   return (
-    <FriendListItem>
+    <FriendListItem selected={isSelected}>
       <Image src={`${friend.image}/?u=${friend.id}`} friend={friend} />
       <FriendInfo>
         <Name>{friend.name}</Name>
@@ -20,7 +22,10 @@ export const Friend = ({ friend }) => {
         )}
         {friend.balance === 0 && <Text>You and {friend.name} are even</Text>}
       </FriendInfo>
-      <Button>Select</Button>
+      <Button onClick={() => onSelection(friend)}>
+        {" "}
+        {isSelected ? "Close" : "Select"}
+      </Button>
     </FriendListItem>
   );
 };
