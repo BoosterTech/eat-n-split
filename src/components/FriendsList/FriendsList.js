@@ -1,5 +1,3 @@
-import { useState } from "react";
-import initialFriends from "../../initialFriends";
 import AddFriendForm from "../AddFriendForm/AddFriendForm";
 import Button from "../Button/Button";
 import { Friend } from "../Friend/Friend";
