@@ -3,31 +3,40 @@ import initialFriends from "../../initialFriends";
 import AddFriendForm from "../AddFriendForm/AddFriendForm";
 import Button from "../Button/Button";
 import { Friend } from "../Friend/Friend";
-import { List, Wrapper } from "./styled";
+import { List, ButtonWrapper } from "./styled";
 
-const FriendsList = () => {
-  const [isAddFriendOpen, setIsAddFriendOpen] = useState(false);
-  const [friends, setFriends] = useState(initialFriends);
-
-  function handleOpen() {
-    setIsAddFriendOpen(!isAddFriendOpen);
-  }
-
+const FriendsList = ({
+  onSelection,
+  selectedFriend,
+  isAddFriendFormOpen,
+  setIsAddFriendFormOpen,
+  friends,
+  setFriends,
+}) => {
   function handleAddFriend(friend) {
     setFriends((friends) => [...friends, friend]);
+  }
+
+  function handleOpen() {
+    setIsAddFriendFormOpen(!isAddFriendFormOpen);
   }
 
   return (
     <List>
       {friends.map((friend) => (
-        <Friend key={friend.id} friend={friend} />
+        <Friend
+          key={friend.id}
+          friend={friend}
+          onSelection={onSelection}
+          selectedFriend={selectedFriend}
+        />
       ))}
-      {isAddFriendOpen && <AddFriendForm onAddFriend={handleAddFriend} />}
-      <Wrapper>
+      {isAddFriendFormOpen && <AddFriendForm onAddFriend={handleAddFriend} />}
+      <ButtonWrapper>
         <Button onClick={handleOpen}>
-          {isAddFriendOpen ? "Close" : "AddFriend"}
+          {!isAddFriendFormOpen ? "Add Friend" : "Close"}
         </Button>
-      </Wrapper>
+      </ButtonWrapper>
     </List>
   );
 };
