@@ -1,10 +1,13 @@
 import styled from "styled-components";
 
 export const Form = styled.form`
+  border-radius: 10px;
+  background-color: #f9efdc;
   display: flex;
   flex-direction: column;
-  max-width: 340px;
-  padding: 10px 15px;
+  max-width: 320px;
+  width: 100%;
+  padding: 25px 15px;
   margin-top: 40px;
   gap: 15px;
 `;
@@ -26,7 +29,7 @@ export const FormButton = styled.button`
   border-radius: 5px;
   border: none;
   background-color: #f7a75e;
-  margin-top: 8px;
+  margin: 8px 0 0 0;
   text-align: center;
 
   @media (hover: hover) {
