@@ -5,7 +5,16 @@ export const FriendListItem = styled.li`
   gap: 20px;
   align-items: center;
   padding: 10px;
-  margin: 5px 0;
+  margin: 13px 0;
+  max-width: 330px;
+  width: 100%;
+
+  ${(props) =>
+    props.selected &&
+    `
+    background-color:#F9EFDC; 
+    border-radius: 10px;
+  `}
 `;
 
 export const ImageContainer = styled.img`
@@ -17,6 +26,8 @@ export const FriendInfo = styled.div``;
 export const Name = styled.h3`
   margin: 0;
   font-size: 1rem;
+  max-width: 150px;
+  word-wrap: break-word;
 `;
 
 export const Text = styled.p`
