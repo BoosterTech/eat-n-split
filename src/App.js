@@ -37,7 +37,11 @@ function App() {
         setIsAddFriendFormOpen={setIsAddFriendFormOpen}
       />
       {selectedFriend && (
-        <SplitForm friend={selectedFriend} onSplitBill={handleSplitBill} />
+        <SplitForm
+          key={selectedFriend.id}
+          friend={selectedFriend}
+          onSplitBill={handleSplitBill}
+        />
       )}
     </div>
   );
