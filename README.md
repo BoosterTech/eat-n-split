@@ -1,6 +1,6 @@
 # 🍴Eat-N-Split💶
 
-Eat-N-Split is a simple yet powerful app designed to help you split the bill with friends effortlessly. Whether you're dining out or sharing a meal, this app allows users to easily input expenses and divide them fairly among all participants.
+Eat-N-Split is a simple app designed to help you split the bill with friends effortlessly. Whether you're dining out or sharing a meal, this app allows users to easily input expenses and divide them fairly among all participants.
 
 Built with React.js for a responsive and smooth user experience, the app makes use of Styled Components to ensure a sleek and customizable interface. Users can input the total bill, specify the number of people, and the app will automatically calculate how much each person owes.
 
