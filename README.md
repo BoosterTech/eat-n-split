@@ -14,10 +14,10 @@ Built with React.js for a responsive and smooth user experience, the app makes u
 ## Installation
 
 1. Clone the repository:  
-   `git clone https://github.com/BoosterTech/react-quiz.git`
+   `git clone https://github.com/BoosterTech/eat-n-split.gitt`
 
 2. Navigate into the project directory:  
-   `cd React-Quiz-App`
+   `cd eat-n-split`
 
 3. Install dependencies:  
    `npm install`
