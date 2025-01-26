@@ -1,4 +1,4 @@
-# Eat-N-Split
+# 🍴Eat-N-Split💶
 
 Eat-N-Split is a simple yet powerful app designed to help you split the bill with friends effortlessly. Whether you're dining out or sharing a meal, this app allows users to easily input expenses and divide them fairly among all participants.
 
