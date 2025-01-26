@@ -13,7 +13,7 @@ Built with React.js for a responsive and smooth user experience, the app makes u
 
 ## Installation
 
-1. Clone the repository:
+1. Clone the repository:[https://github.com/BoosterTech/eat-n-split.git]
 
 2. Navigate into the project directory:
    cd eat-n-split
